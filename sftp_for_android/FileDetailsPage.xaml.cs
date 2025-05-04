@@ -1,8 +1,9 @@
+using Microsoft.Maui.Controls;
+using Microsoft.Maui.Controls.PlatformConfiguration;
+using Microsoft.Maui.Storage;
 using System;
 using System.IO;
 using System.Threading.Tasks;
-using Microsoft.Maui.Controls;
-using Microsoft.Maui.Storage;
 
 namespace sftp_for_android
 {
@@ -71,11 +72,22 @@ namespace sftp_for_android
                 DownloadButton.IsEnabled = false;
                 DownloadButton.Text = "DOWNLOADING...";
 
-                // Determine downloads folder path
-                string localPath = Path.Combine(
-                    Environment.GetFolderPath(Environment.SpecialFolder.Personal),
-                    "Downloads",
-                    _fileItem.Name);
+                // Get downloads directory that's accessible to the user
+                string localPath;
+
+                if (DeviceInfo.Platform == DevicePlatform.Android)
+                {
+                    // Use the public downloads folder on Android
+                    localPath = Path.Combine(
+                        Environment.GetFolderPath(Environment.SpecialFolder.CommonDocuments),
+                        _fileItem.Name);
+                }
+                else
+                {
+                    // Fallback for other platforms
+                    string downloadFolder = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
+                    localPath = Path.Combine(downloadFolder, "Downloads", _fileItem.Name);
+                }
 
                 // Ensure directory exists
                 Directory.CreateDirectory(Path.GetDirectoryName(localPath));
