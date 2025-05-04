@@ -490,7 +490,7 @@ namespace sftp_for_android
                 {
                     return (false, "Das angegebene Verzeichnis existiert nicht");
                 }
-                catch (Renci.SshNet.Common.SshPermissionDeniedException)
+                catch (Renci.SshNet.Common.SftpPermissionDeniedException)
                 {
                     return (false, "Keine Berechtigung für den Zugriff auf das Verzeichnis");
                 }
