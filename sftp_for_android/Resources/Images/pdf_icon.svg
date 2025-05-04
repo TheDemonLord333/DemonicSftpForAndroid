@@ -1,0 +1,17 @@
+﻿<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+  <!-- File Base -->
+  <path d="M10,4 L28,4 L38,14 L38,44 L10,44 Z" fill="#FFFFFF" />
+  
+  <!-- File Corner Fold -->
+  <path d="M28,4 L38,14 L28,14 Z" fill="#DDDDDD" />
+  
+  <!-- File Outline -->
+  <path d="M10,4 L28,4 L38,14 L38,44 L10,44 Z" fill="none" stroke="#121212" stroke-width="1.5" />
+  <path d="M28,4 L28,14 L38,14" fill="none" stroke="#121212" stroke-width="1.5" />
+  
+  <!-- PDF Red Rectangle -->
+  <rect x="14" y="22" width="20" height="16" fill="#FF4444" rx="2" ry="2" />
+  
+  <!-- PDF Text -->
+  <text x="24" y="32" font-family="Arial" font-size="8" font-weight="bold" fill="#FFFFFF" text-anchor="middle">PDF</text>
+</svg>

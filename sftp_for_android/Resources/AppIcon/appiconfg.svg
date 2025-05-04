@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="192" height="192" viewBox="0 0 192 192" xmlns="http://www.w3.org/2000/svg">
+	<!-- Folder Icon Base - Simplified for foreground -->
+	<path d="M50,65 L90,65 L100,75 L142,75 C147,75 152,78 152,85 L152,130 C152,137 147,140 142,140 L50,140 C45,140 40,137 40,130 L40,75 C40,68 45,65 50,65 Z" fill="#FFFFFF" />
+
+	<!-- SFTP Letters -->
+	<text x="96" y="117" font-family="Arial, sans-serif" font-size="30" font-weight="bold" fill="#121212" text-anchor="middle">SFTP</text>
+
+	<!-- Connection Lines -->
+	<path d="M60,95 C75,85 117,115 132,105" stroke="#121212" stroke-width="4" fill="none" stroke-linecap="round" />
+	<path d="M60,110 C75,100 117,130 132,120" stroke="#121212" stroke-width="4" fill="none" stroke-linecap="round" />
+	<path d="M60,80 C75,70 117,100 132,90" stroke="#121212" stroke-width="4" fill="none" stroke-linecap="round" />
+</svg>

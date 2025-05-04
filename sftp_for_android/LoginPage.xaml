@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="sftp_for_android.LoginPage"
+             BackgroundColor="{StaticResource SpotifyBlack}">
+
+    <ScrollView>
+        <StackLayout Padding="30" Spacing="20">
+            <!-- Logo -->
+            <Image Source="app_logo.png"
+                   HeightRequest="120" 
+                   WidthRequest="120"
+                   HorizontalOptions="Center"
+                   Margin="0,20,0,0" />
+
+            <!-- Title -->
+            <Label Text="SFTP Client"
+                   Style="{StaticResource TitleLabelStyle}"
+                   HorizontalOptions="Center"
+                   Margin="0,10,0,30" />
+
+            <!-- Credentials Frame -->
+            <Frame Style="{StaticResource CardFrameStyle}">
+                <StackLayout Spacing="15">
+                    <Label Text="CONNECTION DETAILS" 
+                           Style="{StaticResource CaptionLabelStyle}"
+                           TextTransform="Uppercase" />
+
+                    <!-- Host -->
+                    <StackLayout Spacing="5">
+                        <Label Text="Server" Style="{StaticResource CaptionLabelStyle}" />
+                        <Entry x:Name="HostEntry"
+                               Text="45.133.9.201"
+                               Style="{StaticResource SpotifyEntryStyle}"
+                               IsEnabled="False" />
+                    </StackLayout>
+
+                    <!-- Username -->
+                    <StackLayout Spacing="5">
+                        <Label Text="Username" Style="{StaticResource CaptionLabelStyle}" />
+                        <Entry x:Name="UsernameEntry"
+                               Text="root"
+                               Style="{StaticResource SpotifyEntryStyle}"
+                               IsEnabled="False" />
+                    </StackLayout>
+
+                    <!-- Password -->
+                    <StackLayout Spacing="5">
+                        <Label Text="Password" Style="{StaticResource CaptionLabelStyle}" />
+                        <Entry x:Name="PasswordEntry"
+                               Placeholder="Enter your password"
+                               Style="{StaticResource SpotifyEntryStyle}"
+                               IsPassword="True" />
+                    </StackLayout>
+
+                    <!-- Remote Directory -->
+                    <StackLayout Spacing="5">
+                        <Label Text="Remote Directory" Style="{StaticResource CaptionLabelStyle}" />
+                        <Entry x:Name="PathEntry"
+                               Text="/home/nobrainclient/thedemonlord333"
+                               Style="{StaticResource SpotifyEntryStyle}"
+                               IsEnabled="False" />
+                    </StackLayout>
+                </StackLayout>
+            </Frame>
+
+            <!-- Connect Button -->
+            <Button Text="CONNECT" 
+                    x:Name="ConnectButton"
+                    Style="{StaticResource PrimaryButtonStyle}"
+                    Margin="0,20,0,0"
+                    Clicked="OnConnectButtonClicked" />
+
+            <!-- Help link -->
+            <Label Text="Need help? Contact support"
+                   Style="{StaticResource CaptionLabelStyle}"
+                   HorizontalOptions="Center"
+                   Margin="0,30,0,0" />
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

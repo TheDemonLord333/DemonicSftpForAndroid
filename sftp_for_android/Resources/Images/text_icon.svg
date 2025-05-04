@@ -1,0 +1,22 @@
+﻿<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+  <!-- File Base -->
+  <path d="M10,4 L28,4 L38,14 L38,44 L10,44 Z" fill="#FFFFFF" />
+  
+  <!-- File Corner Fold -->
+  <path d="M28,4 L38,14 L28,14 Z" fill="#DDDDDD" />
+  
+  <!-- File Outline -->
+  <path d="M10,4 L28,4 L38,14 L38,44 L10,44 Z" fill="none" stroke="#121212" stroke-width="1.5" />
+  <path d="M28,4 L28,14 L38,14" fill="none" stroke="#121212" stroke-width="1.5" />
+  
+  <!-- Text Lines -->
+  <line x1="16" y1="20" x2="32" y2="20" stroke="#121212" stroke-width="1.5" />
+  <line x1="16" y1="24" x2="32" y2="24" stroke="#121212" stroke-width="1.5" />
+  <line x1="16" y1="28" x2="32" y2="28" stroke="#121212" stroke-width="1.5" />
+  <line x1="16" y1="32" x2="32" y2="32" stroke="#121212" stroke-width="1.5" />
+  <line x1="16" y1="36" x2="28" y2="36" stroke="#121212" stroke-width="1.5" />
+  
+  <!-- TXT Label -->
+  <rect x="14" y="8" width="12" height="6" fill="#66CCFF" rx="1" ry="1" />
+  <text x="20" y="13" font-family="Arial" font-size="5" font-weight="bold" fill="#FFFFFF" text-anchor="middle">TXT</text>
+</svg>

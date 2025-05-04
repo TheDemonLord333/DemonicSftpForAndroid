@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="sftp_for_android.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:sftp_for_android"
+    Shell.FlyoutBehavior="Disabled"
+    BackgroundColor="{StaticResource SpotifyBlack}"
+    TitleColor="{StaticResource SpotifyWhite}">
+
+    <ShellContent
+        Title="Login"
+        ContentTemplate="{DataTemplate local:LoginPage}"
+        Route="LoginPage" />
+
+    <ShellContent
+        Title="Files"
+        ContentTemplate="{DataTemplate local:FileBrowserPage}"
+        Route="FileBrowserPage" />
+
+</Shell>

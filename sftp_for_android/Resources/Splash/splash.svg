@@ -1,0 +1,15 @@
+<svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+	<!-- Background -->
+	<rect width="256" height="256" fill="#121212" />
+
+	<!-- Spotify-like Logo Circle -->
+	<circle cx="128" cy="128" r="64" fill="#1DB954" />
+
+	<!-- Folder Icon Simplified -->
+	<path d="M92,108 L128,108 L138,118 L164,118 C167,118 170,120 170,123 L170,153 C170,156 167,158 164,158 L92,158 C89,158 86,156 86,153 L86,113 C86,110 89,108 92,108 Z" fill="#121212" />
+
+	<!-- Connectivity Lines -->
+	<path d="M100,130 C110,125 146,140 156,135" stroke="#FFFFFF" stroke-width="3" fill="none" stroke-linecap="round" />
+	<path d="M100,122 C110,117 146,132 156,127" stroke="#FFFFFF" stroke-width="3" fill="none" stroke-linecap="round" />
+	<path d="M100,138 C110,133 146,148 156,143" stroke="#FFFFFF" stroke-width="3" fill="none" stroke-linecap="round" />
+</svg>

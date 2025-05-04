@@ -1,0 +1,18 @@
+<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+	<!-- Background Circle -->
+	<circle cx="256" cy="256" r="256" fill="#1DB954" />
+
+	<!-- Folder Icon Base -->
+	<path d="M135,175 L245,175 L275,205 L377,205 C386,205 395,210 395,225 L395,345 C395,360 386,365 377,365 L135,365 C126,365 117,360 117,345 L117,195 C117,180 126,175 135,175 Z" fill="#121212" />
+
+	<!-- Folder Front -->
+	<path d="M125,195 L387,195 C396,195 405,200 405,215 L405,345 C405,360 396,365 387,365 L125,365 C116,365 107,360 107,345 L107,215 C107,200 116,195 125,195 Z" fill="#212121" />
+
+	<!-- SFTP Text -->
+	<text x="256" y="290" font-family="Arial" font-size="65" font-weight="bold" fill="#FFFFFF" text-anchor="middle">SFTP</text>
+
+	<!-- Connectivity Lines -->
+	<path d="M160,255 C200,235 312,290 352,270" stroke="#1DB954" stroke-width="8" fill="none" stroke-linecap="round" />
+	<path d="M160,230 C200,210 312,265 352,245" stroke="#1DB954" stroke-width="8" fill="none" stroke-linecap="round" />
+	<path d="M160,280 C200,260 312,315 352,295" stroke="#1DB954" stroke-width="8" fill="none" stroke-linecap="round" />
+</svg>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:sftp_for_android"
+             x:Class="sftp_for_android.FileBrowserPage"
+             BackgroundColor="{StaticResource SpotifyBlack}"
+             Title="SFTP Browser">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:FileSizeConverter x:Key="FileSizeConverter" />
+            <local:InverseBoolConverter x:Key="InverseBoolConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <!-- Path display and navigation -->
+        <Frame Grid.Row="0" 
+               BackgroundColor="{StaticResource SpotifyDarkGray}" 
+               Padding="10" 
+               HasShadow="False"
+               CornerRadius="0">
+            <Grid ColumnDefinitions="*,Auto">
+                <Label x:Name="CurrentPathLabel"
+                       Grid.Column="0"
+                       Style="{StaticResource CaptionLabelStyle}"
+                       VerticalOptions="Center"
+                       HorizontalOptions="StartAndExpand"
+                       LineBreakMode="MiddleTruncation" />
+
+                <Button x:Name="RefreshButton"
+                        Grid.Column="1"
+                        Text="↻"
+                        BackgroundColor="{StaticResource SpotifyGreen}"
+                        TextColor="{StaticResource SpotifyWhite}"
+                        WidthRequest="40"
+                        HeightRequest="40"
+                        CornerRadius="20"
+                        FontSize="18"
+                        HorizontalOptions="End"
+                        Clicked="OnRefreshClicked" />
+            </Grid>
+        </Frame>
+
+        <!-- File list -->
+        <Grid Grid.Row="1">
+            <CollectionView x:Name="FileListView"
+                           BackgroundColor="{StaticResource SpotifyBlack}"
+                           SelectionMode="Single"
+                           SelectionChanged="OnFileSelected">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Padding="10" ColumnSpacing="15">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+
+                            <!-- File/Folder Icon -->
+                            <Image Grid.Column="0"
+                                   Source="{Binding Icon}"
+                                   WidthRequest="32"
+                                   HeightRequest="32"
+                                   VerticalOptions="Center" />
+
+                            <!-- File Info -->
+                            <StackLayout Grid.Column="1" Spacing="3">
+                                <Label Text="{Binding Name}"
+                                       Style="{StaticResource BodyLabelStyle}"
+                                       LineBreakMode="MiddleTruncation" />
+
+                                <Label IsVisible="{Binding IsDirectory, Converter={StaticResource InverseBoolConverter}}"
+                                       Text="{Binding Size, Converter={StaticResource FileSizeConverter}}"
+                                       Style="{StaticResource CaptionLabelStyle}" />
+
+                                <Label IsVisible="{Binding IsDirectory}"
+                                       Text="Directory"
+                                       Style="{StaticResource CaptionLabelStyle}" />
+                            </StackLayout>
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+            <!-- Loading indicator -->
+            <ActivityIndicator x:Name="LoadingIndicator"
+                               IsRunning="True"
+                               IsVisible="False"
+                               Color="{StaticResource SpotifyGreen}"
+                               VerticalOptions="Center"
+                               HorizontalOptions="Center" />
+
+            <!-- Empty state -->
+            <StackLayout x:Name="EmptyStateLayout"
+                         IsVisible="False"
+                         VerticalOptions="Center"
+                         HorizontalOptions="Center"
+                         Spacing="20">
+                <Image Source="empty_folder.png"
+                       HeightRequest="80"
+                       WidthRequest="80"
+                       Opacity="0.5" />
+
+                <Label Text="This folder is empty"
+                       Style="{StaticResource SubtitleLabelStyle}"
+                       HorizontalOptions="Center" />
+
+                <Label Text="Upload files or create a new folder"
+                       Style="{StaticResource CaptionLabelStyle}"
+                       HorizontalOptions="Center" />
+            </StackLayout>
+        </Grid>
+
+        <!-- Action Buttons -->
+        <Grid Grid.Row="2" 
+              BackgroundColor="{StaticResource SpotifyDarkGray}"
+              ColumnSpacing="10"
+              Padding="10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Button Grid.Column="0"
+                    Text="UPLOAD"
+                    Style="{StaticResource PrimaryButtonStyle}"
+                    Clicked="OnUploadClicked" />
+
+            <Button Grid.Column="1"
+                    Text="NEW FOLDER"
+                    Style="{StaticResource SecondaryButtonStyle}"
+                    Clicked="OnNewFolderClicked" />
+        </Grid>
+    </Grid>
+</ContentPage>
