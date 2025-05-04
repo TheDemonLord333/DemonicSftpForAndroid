@@ -113,7 +113,7 @@ namespace sftp_for_android
                         // In die Navigation übergeben
                         await Shell.Current.GoToAsync("//FileBrowserPage", new Dictionary<string, object>
                         {
-                            { "SftpConfigJson", configJson }
+                            { "SftpConfig", configJson }
                         });
 
                         // ACHTUNG: Der folgende Code wird nie erreicht, weil du bereits navigiert hast
