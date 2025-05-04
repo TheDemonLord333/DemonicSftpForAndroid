@@ -67,7 +67,7 @@ namespace sftp_for_android
                     Console.WriteLine("Config gesetzt");
 
                     // Sicherstellen, dass _currentPath nicht null ist
-                    _currentPath = _config.RemoteDirectory ?? "/home/nobrainclient/thedemonlord333";
+                    _currentPath = _config.RemoteDirectory ?? "/";
                     Console.WriteLine($"Aktueller Pfad: {_currentPath}");
 
                     UpdatePathDisplay();
@@ -267,7 +267,7 @@ namespace sftp_for_android
                 // Stelle sicher, dass _currentPath und folderName nicht null sind
                 if (string.IsNullOrEmpty(_currentPath))
                 {
-                    _currentPath = "/home/nobrainclient/thedemonlord333";
+                    _currentPath = "/";
                 }
 
                 // Verwende einfache Pfadverkettung statt Path.Combine für Linux-Pfade

@@ -24,7 +24,7 @@ namespace sftp_for_android
         public int Port { get; set; } = 22;
         public string Username { get; set; } = "root";
         public string Password { get; set; } = "ZGen5ZUUQb4bG1rP5JPjCw";
-        public string RemoteDirectory { get; set; } = "/home/nobrainclient/thedemonlord333";
+        public string RemoteDirectory { get; set; } = "/";
     }
 
     /// <summary>

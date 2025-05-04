@@ -57,7 +57,7 @@
                     <StackLayout Spacing="5">
                         <Label Text="Remote Directory" Style="{StaticResource CaptionLabelStyle}" />
                         <Entry x:Name="PathEntry"
-                               Text="/home/nobrainclient/thedemonlord333"
+                               Text="/"
                                Style="{StaticResource SpotifyEntryStyle}"
                                IsEnabled="False" />
                     </StackLayout>
