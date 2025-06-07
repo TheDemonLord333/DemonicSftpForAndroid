@@ -20,7 +20,7 @@ namespace sftp_for_android
     /// </summary>
     public class SftpConfig
     {
-        public string Host { get; set; } = "45.133.9.201";
+        public string Host { get; set; } = "142.251.40.142";
         public int Port { get; set; } = 22;
         public string Username { get; set; } = "root";
         public string Password { get; set; } = "ZGen5ZUUQb4bG1rP5JPjCw";
